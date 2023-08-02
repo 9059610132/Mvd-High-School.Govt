@@ -368,4 +368,17 @@ nav a {
 }
 
 /* Add more media queries or modify the existing ones based on your design requirements */
-
+.navigation .btnLogin-popup
+  {
+    width: 100px;
+    height: 30px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: -5s;
+  }
