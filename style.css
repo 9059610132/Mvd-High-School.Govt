@@ -1,0 +1,453 @@
+/********* Common CSS Starts **********/
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+html,
+body {
+  font-family: 'Poppins', sans-serif, arial;
+  font-size: 16px;
+  color: #242424;
+}
+.container {
+  width: 1300px;
+  margin: 0px auto;
+}
+.main-section {
+  width: 100%;
+  float: left;
+  padding: 70px 0px 70px 0px;
+}
+.heading {
+  font-size: 28px;
+  font-weight: 500;
+  border-bottom: 1px solid #46b7c1;
+  margin-bottom: 20px;
+  color: #46b7c1;
+}
+/********* Common CSS End **********/
+/********* Header HTML CSS Starts **********/
+.header {
+	background: #46b7c1;
+	padding: 6px;
+}
+.header b {
+	background: #fff;
+	color: red;
+	padding:10px;
+	font-size: 20px;
+}
+.header marquee {
+	font-size:20px;
+	color: #ffffff;
+	width: 80%;
+}
+/********* Header HTML CSS End **********/
+/********* Design Logo and Menu section CSS Starts **********/
+.logo {
+	height:30px;
+
+ 
+}
+/*Menu Section Menu Section*/
+nav {
+	float: right;
+	padding:25px 0px;
+}
+nav a {
+	color: black;
+	text-decoration: none;
+	font-size:18px;
+	padding:2px 10px;
+	font-weight:500;
+}
+/********* Design Logo and Menu section CSS End **********/
+/********* Slider CSS Starts **********/
+.slider img {
+  width: 100%;
+}
+/********* Slider CSS End **********/
+/********* Campus, Events and Notice Board section CSS Starts **********/
+.event {
+  width: 32%;
+  margin-right: 1%;
+  float: left;
+  background-color: #fff;
+  padding: 10px;
+}
+.event .heading {
+  border-bottom: 1px solid #46b7c1;
+  padding: 5px;
+  color: #fff;
+  background: #46b7c1;
+  text-align: center;
+}
+.event ul li {
+  margin-bottom: 20px;
+  width: 100%;
+  float: left;
+  list-style: none;
+}
+.event-date {
+  background: #46b7c1;
+  float: left;
+  text-align: center;
+  font-size: 14px;
+  color: #fff;
+  padding: 8px 12px;
+  margin-right: 10px;
+}
+
+/********* Campus, Events and Notice Board section CSS End **********/
+.map_section{
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+/********** About Us CSS Starts **********/  
+.about-us div {
+  width: 45%;
+  float: left;
+  line-height: 30px;
+  font-size: 18px;
+}
+.about-us h4 {
+  font-size: 22px;
+}
+.about-us p {
+  line-height: 42px;
+}
+.about-us img {
+  width: 35%;
+  height: 20%;
+  float: left;
+}
+/********** About Us CSS Ends **********/
+
+
+.us p {
+  
+  width: 60%;
+  line-height: 42px;
+}
+/********** School Info, Award and Certificate CSS Starts **********/  
+.award p {
+  width: 100%;
+  float: left;
+  font-size: 16px;
+}
+.award img {
+  width: 100%;
+}
+.award b {
+  min-width: 115px;
+  float: left;
+  margin-bottom: 20px;
+}
+.award h3 {
+  font-size: 23px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+/********** School Info, Award and Certificate CSS Ends **********/
+/********* Testimonial Section CSS Starts **********/
+.testimonial {
+  width: 30.5%;
+  float: left;
+  margin-right: 2.5%;
+}
+.testimonial-text {
+  background: #46b7c1;
+  padding: 20px;
+  line-height: 35px;
+  border-radius: 10px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+.testimonial-detail {
+  float: left;
+  margin-top: 10px;
+}
+.testimonial-img {
+  float: left;
+}
+.testimonial-img img {
+  border-radius: 50%;
+}
+.testimonial-name {
+  margin-left: 10px;
+  float: left;
+}
+.testimonial-name h5 {
+  font-size: 18px;
+  margin-top: 8px;
+}
+/********* Testimonial Section CSS End **********/
+/********* Gallery section CSS Starts **********/
+.gallery img {
+  width: 24%;
+}
+/********* Gallery section CSS End **********/
+/********* Footer section CSS Starts **********/
+.footer {
+  background-color: #46b7c1;
+  padding: 20px 0px;
+  width: 100%;
+  float: left;
+}
+.footer-logo {
+  width: 70%;
+}
+.footer-sect {
+  width: 100%;
+  float: left;
+  text-align: center;
+  margin-top: 20px;
+}
+.footer-sect a {
+  color: white;
+  margin-left: 10px;
+  text-decoration: none;
+}
+/********* Footer section CSS End **********/
+.contact_section{
+  position: relative;
+  width: 100%;
+  height: auto;
+  background: rgba(0, 0, 0, 0.07);
+  padding: 60px 100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.contact_box_section{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+}
+.map_section{
+  width: 54%;
+  height: auto;
+  border-radius: 4px;
+}
+.form_section{
+  position: absolute;
+  width: 46%;
+  height: auto;
+  border-radius: 4px;
+  right: 100px;
+  background: var(--fourth);
+  display: flex;
+  align-items: flex-start;
+  justify-self: center;
+  flex-direction: column;
+  row-gap: 1.1rem;
+  padding: 35px 30px 35px 100px;
+  box-shadow: 5px 5px rgba(68, 27, 5, 0.12);
+  border: 1px solid rgba(143, 143, 143);
+}
+.form_section form{
+  width: 100%;
+  height: auto;
+}
+
+.input_group{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+.input_box{
+  width: 50%;
+}
+.form_section .label{
+  font-size: 1.13rem;
+  font-weight: 600;
+  color: var(--primary);
+  display: inline-block;
+  padding: 0.5rem;
+}
+.form_section input{
+  width: 100%;
+  height: 35px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.0rem;
+  font-weight: 500;
+}
+.message_box{
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+.form_section textarea{
+  width: 100%;
+  height: 35px;
+  border-radius: 4px;
+  outline: none;
+  border: none;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.0rem;
+  font-weight: 500;
+}
+.submit_btn{
+  border-radius: 4px !important;
+}
+
+/* Common CSS */
+/* Rest of the common CSS code here */
+
+/* Media Query for screens with a width between 975px and 1024px */
+@media only screen and (max-width: 1024px) and (min-width: 975px) {
+  /* Add the styles specific to this screen size range */
+  /* For example: */
+  .container {
+    width: 100%;
+    padding: 0 20px; /* Adjust the padding to your preference */
+  }
+
+  .heading {
+    font-size: 26px;
+  }
+
+  /* Add other styles as needed for this screen size range */
+}
+
+/* Media Query for screens with a width between 768px and 975px */
+@media only screen and (max-width: 975px) and (min-width: 768px) {
+  /* Add the styles specific to this screen size range */
+  /* For example: */
+  .container {
+    width: 100%;
+    padding: 0 10px; /* Adjust the padding to your preference */
+  }
+
+  .heading {
+    font-size: 24px;
+  }
+
+  /* Add other styles as needed for this screen size range */
+}
+
+/* Add more media queries or modify the existing ones based on your design requirements */
+/* Common CSS */
+/* Rest of the common CSS code here */
+
+/* Media Query for screens with a width between 550px and 768px */
+@media only screen and (max-width: 768px) and (min-width: 550px) {
+  /* Add the styles specific to this screen size range */
+  /* For example: */
+  .container {
+    width: 100%;
+    padding: 0 15px; /* Adjust the padding to your preference */
+  }
+
+  .heading {
+    font-size: 22px;
+  }
+
+  /* Add other styles as needed for this screen size range */
+}
+
+/* Media Query for screens with a width between 370px and 551px */
+@media only screen and (max-width: 551px) and (min-width: 370px) {
+  /* Add the styles specific to this screen size range */
+  /* For example: */
+  .container {
+    width: 100%;
+    padding: 0 10px; /* Adjust the padding to your preference */
+  }
+
+  .heading {
+    font-size: 18px;
+  }
+
+  /* Add other styles as needed for this screen size range */
+}
+
+/* Add more media queries or modify the existing ones based on your design requirements */
+/* Reset some default button styles */
+button {
+  border: none;
+  background: none;
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Style for the button */
+.btnLogin-popup {
+  display: inline-block;
+  padding: 15px 30px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #4285f4;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+/* Hover effect */
+.btnLogin-popup:hover {
+  background-color: #da2d9b;
+  transform: scale(1.1);
+}
+
+/*scroll*/
+.image-gallery {
+  max-width: 500px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+}
+
+.scrollable-images {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+.scrollable-images img {
+  width: 100%;
+  height: auto;
+}
+
+.scroll-buttons {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scroll-buttons button {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  margin: 0 5px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.scroll-buttons button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+.image-item {
+  width: 200px; /* Adjust the width as needed */
+  height: auto; /* The height will scale proportionally based on the width */
+}
+
