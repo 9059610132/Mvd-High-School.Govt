@@ -312,43 +312,30 @@ function signOut(){
 
 
 
-  // After a successful login
+
+// After a successful login
 firebase.auth().signInWithEmailAndPassword(email, password)
-.then((userCredential) => {
-  // Retrieve the authentication token
-  userCredential.user.getIdToken().then((token) => {
-    // Store the token in local storage
-    localStorage.setItem('authToken', token);
-    
-    // Redirect to home page
-    window.location.href = 'home.html';
+  .then((userCredential) => {
+    // Retrieve the authentication token
+    userCredential.user.getIdToken().then((token) => {
+      // Store the token in a secure cookie with HttpOnly flag
+      document.cookie = `authToken=${token}; path=/; HttpOnly`;
+
+      // Redirect to home page
+      window.location.href = 'home.html';
+    });
+  })
+  .catch((error) => {
+    // Handle login error
   });
-})
-.catch((error) => {
-  // Handle login error
-});
 
 // On page load
 window.addEventListener('load', () => {
-const authToken = localStorage.getItem('authToken');
-if (authToken) {
-  // User is logged in, redirect to home page
-  window.location.href = 'home.html';
-} else {
-  // User is not logged in, show login form
-  // ... existing code for login form
-}
-});
-
-// When accessing protected resources (e.g., database)
-const authToken = localStorage.getItem('authToken');
-if (authToken) {
-// Use the token to authenticate Firebase requests
-const databaseRef = firebase.database().ref();
-databaseRef.on('value', (snapshot) => {
-  // Handle database response
-});
-} else {
+  const authToken = getCookie('authToken');
+  if (authToken) {
+    // User is logged in, redirect to home page
+    window.location.href = 'home.html';
+  }  else {
 // User is not authenticated, handle appropriately
 
 
@@ -359,3 +346,14 @@ const errorMessage = document.createElement('p');
 errorMessage.textContent = 'You need to be logged in to access this resource.';
 document.getElementById('errorContainer').appendChild(errorMessage); // Display the message in your HTML
 }
+});
+
+// Helper function to get cookie value by name
+function getCookie(name) {
+  const value = `; ${document.cookie}`;
+  const parts = value.split(`; ${name}=`);
+  if (parts.length === 2) return parts.pop().split(';').shift();
+}
+
+// ... Continue with the rest of your code
+
