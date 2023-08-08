@@ -308,4 +308,20 @@ function signOut(){
     });
 }
 
-
+function forgotpasword(){
+    const userEmail = document.getElementById("userSIEmail").value
+firebase.auth().sendPasswordResetEmail(userEmail)
+  .then(() => {
+   alert("reset link sent to your email id")
+  })
+  .catch((error) => {
+    let errorMessage = error.message;
+   console.log(errorMessage);
+    swal({
+            type: 'error',
+            title: 'Error',
+            text: "Error",
+        })
+    // ..
+  });
+}
