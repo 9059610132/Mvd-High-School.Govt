@@ -307,3 +307,55 @@ function signOut(){
         })
     });
 }
+
+
+
+
+
+  // After a successful login
+firebase.auth().signInWithEmailAndPassword(email, password)
+.then((userCredential) => {
+  // Retrieve the authentication token
+  userCredential.user.getIdToken().then((token) => {
+    // Store the token in local storage
+    localStorage.setItem('authToken', token);
+    
+    // Redirect to home page
+    window.location.href = 'home.html';
+  });
+})
+.catch((error) => {
+  // Handle login error
+});
+
+// On page load
+window.addEventListener('load', () => {
+const authToken = localStorage.getItem('authToken');
+if (authToken) {
+  // User is logged in, redirect to home page
+  window.location.href = 'home.html';
+} else {
+  // User is not logged in, show login form
+  // ... existing code for login form
+}
+});
+
+// When accessing protected resources (e.g., database)
+const authToken = localStorage.getItem('authToken');
+if (authToken) {
+// Use the token to authenticate Firebase requests
+const databaseRef = firebase.database().ref();
+databaseRef.on('value', (snapshot) => {
+  // Handle database response
+});
+} else {
+// User is not authenticated, handle appropriately
+
+
+// ... Include the rest of your provided code for signup, profile, and signout functionality
+window.location.href = 'login.html'; // Redirect to your login page
+// Or display a message
+const errorMessage = document.createElement('p');
+errorMessage.textContent = 'You need to be logged in to access this resource.';
+document.getElementById('errorContainer').appendChild(errorMessage); // Display the message in your HTML
+}
