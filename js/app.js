@@ -325,3 +325,12 @@ firebase.auth().sendPasswordResetEmail(userEmail)
     // ..
   });
 }
+
+
+
+let userAvatar = document.getElementById("userAvatar");
+let inputFile = document.getElementById("input-file");
+
+inputFile.onchange = function(){
+    userAvatar.src = URL.createObjectURL(inputFile.files[0]);
+}
