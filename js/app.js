@@ -106,6 +106,8 @@ function signUp(){
                 userTw: "https://twitter.com/",
                 userGp: "https://plus.google.com/",
                 userBio: "User biography",
+                profileImageURL: imageURL,
+
             }
             firebaseRef.child(uid).set(userData);
             swal('Your Account Created','Your account was created successfully, you can log in now.',
@@ -183,6 +185,17 @@ function signIn(){
                     window.location.replace("school.html");
                 }, 1000)
             });
+            localStorage.setItem('userToken', 'yourAuthToken');
+
+            // Check on page load
+            window.addEventListener('load', () => {
+              const userToken = localStorage.getItem('userToken');
+              if (userToken) {
+                // User is logged in, redirect to home page
+                window.location.href = 'school.html';
+              }
+            });
+
         }).catch((error) => {
             // Handle Errors here.
             var errorCode = error.code;
@@ -326,11 +339,14 @@ firebase.auth().sendPasswordResetEmail(userEmail)
   });
 }
 
+//user image added code
+
+
 
 
 let userAvatar = document.getElementById("userAvatar");
 let inputFile = document.getElementById("input-file");
 
 inputFile.onchange = function(){
-    userAvatar.src = URL.createObjectURL(inputFile.files[0]);
+  userAvatar.src = URL.createObjectURL(inputFile.files[0]);
 }
